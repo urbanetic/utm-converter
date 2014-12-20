@@ -1,0 +1,19 @@
+{
+  "name": "utm-converter",
+  "version": "0.1.0",
+  "homepage": "https://github.com/urbanetic/utm-converter",
+  "authors": [
+    "Aram Kocharyan <akarmenia@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "Requirejs": "requirejs#2.1.x"
+  }
+}
