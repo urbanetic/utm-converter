@@ -636,7 +636,7 @@
     }
     UTMXYToLatLon(x, y, zone, args.isSouthern, coord);
     return {
-      coord: {lon: coord[0], lat: coord[1]}
+      coord: {lon: RadToDeg(coord[1]), lat: RadToDeg(coord[0])}
     }
   }
 
