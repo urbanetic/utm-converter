@@ -584,7 +584,7 @@
   // END ORIGINAL LIBRARY
   //////////////////////////////////////////////////////////////////////////////////////////////////
 
-  UtmConverter = function() {
+  var UtmConverter = function() {
     // Currently no additional construction.
   };
 
@@ -649,5 +649,7 @@
       return Array.prototype.slice.apply(coord);
     }
   }
+
+  return UtmConverter;
 
 }));
