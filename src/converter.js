@@ -623,9 +623,9 @@
    * @param {Object} args
    * @param {Array|Object} args.coord - The UTM coordinate as an array in the form
    *    <code>[x, y]</code> or an object in the form <code>{x: 0, y: 0}</code>.
-   * @return {Object} result.coord - The UTM coordinate.
-   * @return {Number} result.zone - The UTM zone.
-   * @return {Boolean} result.isSouthern - Whether the coordinate is in the southern hemisphere.
+   * @param {Object} args.coord - The UTM coordinate.
+   * @param {Number} args.zone - The UTM zone.
+   * @param {Boolean} args.isSouthern - Whether the coordinate is in the southern hemisphere.
    * @return {Object} result
    * @return {Object} result.coord - The WGS84 coordinate.
    * @return {Number} result.longitude - The longitude in degrees.
