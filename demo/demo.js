@@ -1,4 +1,4 @@
-require(['UtmConverter'], function() {
+require(['UtmConverter'], function(UtmConverter) {
 
   var converter = new UtmConverter();
   var wgsCoord = [145.240917, -37.830436];

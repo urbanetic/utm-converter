@@ -591,14 +591,17 @@
   /**
    * @param {Object} args
    * @param {Array|Object} args.coord - The WGS84 coordinate as an array in the form
-   *    <code>[longitude, latitude]</code> or an object in the form <code>{lon: 0, lat: 0}</code>.
+   *    <code>[longitude, latitude]</code> or an object in the form
+   *    <code>{longitude: 0, latitude: 0}</code>.
    * @return {Object} result
    * @return {Object} result.coord - The UTM coordinate.
+   * @return {Number} result.coord.x
+   * @return {Number} result.coord.y
    * @return {Number} result.zone - The UTM zone.
    * @return {Boolean} result.isSouthern - Whether the coordinate is in the southern hemisphere.
    */
   UtmConverter.prototype.toUtm = function(args) {
-    var coord = coordToArray(args.coord, 'lon', 'lat');
+    var coord = coordToArray(args.coord, 'longitude', 'latitude');
     var lon = coord[0];
     var lat = coord[1];
     if (lon == null || (lon < -180) || (180 <= lon)) {
@@ -625,6 +628,8 @@
    * @return {Boolean} result.isSouthern - Whether the coordinate is in the southern hemisphere.
    * @return {Object} result
    * @return {Object} result.coord - The WGS84 coordinate.
+   * @return {Number} result.longitude - The longitude in degrees.
+   * @return {Number} result.latitude - The latitude in degrees.
    */
   UtmConverter.prototype.toWgs = function(args) {
     var coord = coordToArray(args.coord, 'x', 'y');
@@ -636,7 +641,7 @@
     }
     UTMXYToLatLon(x, y, zone, args.isSouthern, coord);
     return {
-      coord: {lon: RadToDeg(coord[1]), lat: RadToDeg(coord[0])}
+      coord: {longitude: RadToDeg(coord[1]), latitude: RadToDeg(coord[0])}
     }
   }
 
