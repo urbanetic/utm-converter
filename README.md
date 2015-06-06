@@ -12,7 +12,7 @@ var utmResult = converter.toUtm({coord: wgsCoord});
 // {"coord":{"x":345196.1971905405,"y":5811540.431764047},"zone":55,"isSouthern":true}
 
 var wgsResult = converter.toWgs(utmResult);
-// {"coord":{"lon":145.24091699999727,"lat":-37.83043599999867}}
+// {"coord":{"longitude":145.24091699999727,"latitude":-37.83043599999867}}
 ```
 
 ## License
