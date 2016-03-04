@@ -4,12 +4,13 @@
   "description": "A converter between geographic coordinates in WGS84 and Universal Transverse Mercator (UTM) coordinates.",
   "author": "Aram Kocharyan <akarmenia@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/urbanetic/utm-converter.git"
+  },
   "directories": {
     "test": "test",
     "lib": "src"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/urbanetic/utm-converter.git"
-  }
+  "main": "./src/converter.js"
 }
